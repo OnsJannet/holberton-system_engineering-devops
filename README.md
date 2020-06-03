@@ -1,3 +1,3 @@
-# holberton-system_engineering-devops
-# holberton-system_engineering-devops
+this is about shell
+
 # holberton-system_engineering-devops

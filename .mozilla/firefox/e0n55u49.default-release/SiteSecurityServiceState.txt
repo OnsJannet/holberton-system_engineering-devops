@@ -36,7 +36,7 @@ tvshows.club:HSTS	0	18308	1613411521432,1,0,2
 login.windows.net:HSTS	0	18415	1622619315717,1,1,2
 api.hubapi.com:HSTS	1	18416	1622708913743,1,1,2
 upload.wikimedia.org:HSTS	5	18415	1697506180116,1,1,2
-chat-pa.clients6.google.com:HSTS	8	18417	1602177916319,1,1,2
+chat-pa.clients6.google.com:HSTS	8	18417	1602177958188,1,1,2
 mirrors.edge.kernel.org:HSTS	0	18415	1606884797699,1,0,2
 contacts.google.com:HSTS	8	18417	1622824347871,1,0,2
 secure.aadcdn.microsoftonline-p.com:HSTS	0	18415	1622617951772,1,0,2
@@ -182,9 +182,9 @@ www.gnu.org:HSTS	1	18415	1654198646305,1,0,2
 player.vimeo.com:HSTS	0	18313	1613850956222,1,1,2
 cdn.speedcurve.com:HSTS	1	18315	1598233027453,1,0,2
 www.python.org:HSTS	0	18315	1645553252112,1,1,2
-api.github.com:HSTS	3	18417	1622827527189,1,1,2
+api.github.com:HSTS	3	18417	1622827781127,1,1,2
 cdn.vox-cdn.com:HSTS	1	18314	1613949747329,1,0,2
-github.com:HSTS	3	18417	1622827527853,1,1,2
+github.com:HSTS	3	18417	1622827793820,1,1,2
 authcdn.geeksforgeeks.org:HSTS	0	18417	1591261471625,1,1,2
 api.facebook.com:HSTS	0	18415	1606645858644,1,0,2
 um.simpli.fi:HSTS	0	18416	1654275193810,1,1,2
@@ -306,7 +306,7 @@ m.stripe.network:HSTS	1	18415	1622650780833,1,1,2
 app.vagrantup.com:HSTS	0	18415	1622626574050,1,1,2
 s1795.t.eloqua.com:HSTS	0	18308	1613402847960,1,0,2
 secure.eloqua.com:HSTS	0	18308	1613402848303,1,0,2
-collector.githubapp.com:HSTS	3	18417	1622827527087,1,0,2
+collector.githubapp.com:HSTS	3	18417	1622827781152,1,0,2
 8548780.fls.doubleclick.net:HSTS	0	18315	1582487736662,1,0,2
 null-byte.wonderhowto.com:HSTS	0	18378	1650978882866,1,1,2
 api-public.addthis.com:HSTS	2	18417	1606990367573,1,1,2
@@ -321,7 +321,7 @@ dc.services.visualstudio.com:HSTS	0	18313	1613851309684,1,0,2
 compliancy.datacamp.com:HSTS	1	18416	1606757781998,1,1,2
 miro.medium.com:HSTS	3	18417	1606841815538,1,1,2
 9212252.fls.doubleclick.net:HSTS	0	18314	1582413234325,1,0,2
-avatars3.githubusercontent.com:HSTS	3	18417	1622849122537,1,0,2
+avatars3.githubusercontent.com:HSTS	3	18417	1622849376346,1,0,2
 hproject-1.disqus.com:HSTS	0	18304	1581540445550,1,1,2
 www.pcmag.com:HSTS	0	18315	1598207237070,1,1,2
 www.facebook.com:HSTS	14	18417	1622799561384,1,1,2

@@ -1,0 +1,87 @@
+{
+  "Version": "18.04",
+  "OEM": {
+    "Vendor": "Hewlett-Packard",
+    "Product": "HP Pavilion g6 Notebook PC",
+    "Family": "103C_5335KV G=N L=CON B=HP S=PAV X=Null"
+  },
+  "BIOS": {
+    "Vendor": "Insyde",
+    "Version": "F.12"
+  },
+  "CPU": {
+    "OpMode": "32-bit, 64-bit",
+    "CPUs": "4",
+    "Threads": "2",
+    "Cores": "2",
+    "Sockets": "1",
+    "Vendor": "GenuineIntel",
+    "Family": "6",
+    "Model": "42",
+    "Stepping": "7",
+    "Name": "Intel(R) Core(TM) i3-2370M CPU @ 2.40GHz",
+    "Virtualization": "VT-x"
+  },
+  "Arch": "amd64",
+  "GPU": [
+    {
+      "Vendor": "8086",
+      "Model": "0116"
+    },
+    {
+      "Vendor": "1002",
+      "Model": "6840"
+    }
+  ],
+  "RAM": 3.9,
+  "Disks": [
+    750.2
+  ],
+  "Partitions": [
+    40.1
+  ],
+  "Screens": [
+    {
+      "Size": "344mmx194mm",
+      "Resolution": "1366x768",
+      "Frequency": "60.00"
+    }
+  ],
+  "Autologin": false,
+  "LivePatch": false,
+  "Session": {
+    "DE": "ubuntu:GNOME",
+    "Name": "ubuntu",
+    "Type": "x11"
+  },
+  "Language": "en_US",
+  "Timezone": "Africa/Tunis",
+  "Install": {
+    "Media": "Ubuntu 18.04.3 LTS \"Bionic Beaver\" - Release amd64 (20190805)",
+    "Type": "GTK",
+    "OEM": false,
+    "PartitionMethod": "resize_use_free",
+    "DownloadUpdates": true,
+    "Language": "en",
+    "Minimal": false,
+    "RestrictedAddons": false,
+    "Stages": {
+      "0": "language",
+      "1": "language",
+      "23": "console_setup",
+      "29": "console_setup",
+      "40": "console_setup",
+      "42": "console_setup",
+      "50": "console_setup",
+      "55": "console_setup",
+      "60": "wireless",
+      "77": "prepare",
+      "249": "partman",
+      "257": "start_install",
+      "280": "timezone",
+      "341": "usersetup",
+      "463": "user_done",
+      "908": "done"
+    }
+  }
+}

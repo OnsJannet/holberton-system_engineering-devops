@@ -1,1 +1,0 @@
-this is about the shell commands

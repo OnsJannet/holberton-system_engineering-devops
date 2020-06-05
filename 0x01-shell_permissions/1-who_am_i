@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l /tmp/h$ ./1-who_am_i
+ls -l 

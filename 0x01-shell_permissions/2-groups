@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l /tmp/h$ ./2-groups
+/etc/group

@@ -1,2 +1,2 @@
-#!/bin/bash/
-chown betty,holberton _hello ; chgrp betty,holberton _hello
+#!/bin/bash
+chown -h betty:holberton_hello

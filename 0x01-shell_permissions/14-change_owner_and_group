@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty chgrp holberton /tmp/h$
+chown betty:holberton*

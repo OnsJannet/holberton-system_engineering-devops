@@ -1,0 +1,1 @@
+this is about shell redirection and special characters

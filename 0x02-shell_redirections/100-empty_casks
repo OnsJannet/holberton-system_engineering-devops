@@ -1,2 +1,2 @@
 #!/bin/bash
-find /holbertonschool -type -empty
+find . -empty -printf "%f\n"

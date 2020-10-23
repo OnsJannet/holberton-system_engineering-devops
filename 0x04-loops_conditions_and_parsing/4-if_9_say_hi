@@ -7,6 +7,6 @@ do
 	 i=$(( i + 1 ))
 	if [ $i -eq 10 ]
 	then
-		echo "hi"
+		echo "Hi"
     fi
 done

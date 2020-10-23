@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Displays number 1 to 100
 i=1
-while [ $i -le 99 ]
+while [ $i -le 100 ]
 do 
 	if [ $((i%3)) = 0 ] && [ $((i%5)) = 0 ]
 	then

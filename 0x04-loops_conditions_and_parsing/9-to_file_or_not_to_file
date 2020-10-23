@@ -2,7 +2,7 @@
 #Displays the information about a file
 	if [ -e "holbertonschool" ];
 	then
-		echo "holbertonschool file exist"
+		echo "holbertonschool file exists"
 		if [ -s "holbertonschool" ]
 	then
 		echo "holbertonschool file is not empty"
@@ -11,7 +11,7 @@
 	fi
 	if [ -f "holbertonschool" ];
 	then
-		echo "holbertonschool file is a regular file"
+		echo "holbertonschool is a regular file"
     fi
 	else
 		echo "holbertonschool file does not exist"

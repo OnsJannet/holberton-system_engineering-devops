@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #print str n times
 for (( c=1; c<=10; c++ ))
 do 

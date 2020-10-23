@@ -10,6 +10,6 @@ do
 		echo "bad luck"
     elif [ $i -eq 7 ]
 	then
-		echo "bad luck"
+		echo "good luck"
     fi
 done

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#print str n times using while until
+counter=0
+
+until [ $counter -gt 9 ]
+do
+  echo Holberton School
+  ((counter++))
+done

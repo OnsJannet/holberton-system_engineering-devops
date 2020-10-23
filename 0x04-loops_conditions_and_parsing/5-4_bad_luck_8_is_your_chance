@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 #print str n times using while loop using if and elif statements
 i=1
-while [ $i -le 8 ]
+while [ $i -le 10 ]
 do 
-	echo "Holberton School"
-	 i=$(( i + 1 ))
 	if [ $i -eq 4 ]
 	then
 		echo "bad luck"
-    elif [ $i -eq 7 ]
+    elif [ $i -eq 8 ]
 	then
 		echo "good luck"
-    fi
+	else
+		echo "Holberton School"
+	fi
+	i=$(( i + 1 ))
 done

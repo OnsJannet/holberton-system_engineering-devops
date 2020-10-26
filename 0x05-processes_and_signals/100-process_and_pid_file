@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#creat a file and kill it
+sudo touch /var/run/holbertonscript.pid
+sudo bash -c 'echo $$ > /var/run/holbertonscript.pid'
+pid=$$
+echo $pid > /var/run/holbertonscript.pid
+i=1
+while [ $i ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+    trap "echo I hate the kill command && rm /var/run/holbertonscript.pid && exit" SIGTERM
+    trap "echo Y U no love me?!" SIGINT
+    trap "rm /var/run/holbertonscript.pid && exit" SIGQUIT
+done

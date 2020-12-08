@@ -1,11 +1,11 @@
 # ssh_config file using puppet
-file_line { 'Turn off passwd auth':
+file_line { 'auth':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
   line   => 'PasswordAuthentication no',
 }
 
-file_line { 'Declare identity file':
+file_line { 'pk':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
   line   => 'IdentityFile /home/vagrant/.ssh/holberton',

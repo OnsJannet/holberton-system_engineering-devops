@@ -12,7 +12,6 @@ echo "
     default_backend My_Web_Servers
 
 backend My_Web_Servers
-backend web_servers
     mode http
     balance roundrobin
     server 1928-web-01  35.237.62.23:80 check

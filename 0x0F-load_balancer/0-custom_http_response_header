@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Configuring a new server
+
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+sudo chmod -R 755 /var/www
+sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sudo f=$(printf %s "location /redirect_me {return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;}")
+sudo sed -i  "48i $f" /etc/nginx/sites-available/default
+sudo sed -i "add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+service nginx restart

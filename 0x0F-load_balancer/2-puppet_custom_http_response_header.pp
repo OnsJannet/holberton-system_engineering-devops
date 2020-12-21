@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# puppet config
+# puppet config nginx
 
 exec { '/usr/bin/env apt-get -y update' : }
 package { 'nginx':
@@ -8,13 +8,13 @@ package { 'nginx':
 file { '/var/www/html/index.html' :
   content => 'Holberton School!',
 }
-exec { 'add header' :
-  provider => shell,
-  ensure   => present,
-  environment => ["HOSTNAME=${hostname}"],
-  command     => 'sudo sed -i "s/include \/etc\/nginx\/sites-enabled\/\*;/include \/etc\/nginx\/sites-enabled\/\*;\n\tadd_header X-Served-By ${hostname};/" /etc/nginx/nginx.conf',
+-> file_line { 'header' :
+  ensure => present,
+  path   => '/etc/nginx/sites-available/default',
+  line   => "\tadd_header X-Served-By ${hostname};",
+  after  => 'server_name _;',
 }
-exec { 'Nginx Restaring':
+-> exec { 'Restaring Nginx':
   provider => shell,
   command  => 'sudo service nginx restart',
 }

@@ -1,17 +1,22 @@
 #!/usr/bin/env bash
 # Displays information about a domain
+# shellcheck disable=2086
 
-
-if [ "$#" -eq 2 ] 
+if [ "$#" -eq 2 ]
 then
 # script accepting domain and subdomain
-	echo -n "The subdomain "$2" is a " 
-	dig "$2.$1"  | awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 | awk '{print $4 " record and points to " $5}'
+	echo -n "The subdomain $2 is a " 
+	dig "$2.$1"  | awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 |
+    awk '{print $4 " record and points to " $5}'
+
 else
 #if only the parameter domain is provided 
-    dig "www.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print "The subdomain " substr($1,1,3) " is a " $4 " record and points to " $5 }'
-    dig "lb-01.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print "The subdomain " substr($1,1,5) " is a " $4 " record and points to " $5 }'
-    dig "web-01.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print "The subdomain " substr($1,1,6) " is a " $4 " record and points to " $5 }'
-    dig "web-02.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print "The subdomain " substr($1,1,6) " is a " $4 " record and points to " $5 }'
+    dig "www.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 |
+    awk '{print "The subdomain " substr($1,1,3) " is a " $4 " record and points to " $5 }'
+    dig "lb-01.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 |
+    awk '{print "The subdomain " substr($1,1,5) " is a " $4 " record and points to " $5 }'
+    dig "web-01.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 |
+    awk '{print "The subdomain " substr($1,1,6) " is a " $4 " record and points to " $5 }'
+    dig "web-02.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1 |
+    awk '{print "The subdomain " substr($1,1,6) " is a " $4 " record and points to " $5 }'
 fi
- 

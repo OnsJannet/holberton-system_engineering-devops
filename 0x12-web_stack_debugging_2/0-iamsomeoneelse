@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # whoami displays the user
 
-sudo grep -wF -e "$(whoami)" "$1"
+sudo -u grep "$(whoami)" "$1"

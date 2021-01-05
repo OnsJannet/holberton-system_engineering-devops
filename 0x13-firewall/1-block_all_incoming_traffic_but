@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# a Bash Script that configures a ufw firewall to block all incoming traffic
+
+apt-get install ufw
+sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
+ufw disable
+ufw enable
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw allow www
+sudo ufw allow http
+sudo ufw allow https

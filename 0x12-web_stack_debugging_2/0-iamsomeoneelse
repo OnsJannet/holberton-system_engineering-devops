@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # whoami displays the user
 
-sudo -u "$(whoami)" "$1"
+sudo -u "$1" whoami

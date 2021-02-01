@@ -11,7 +11,6 @@ if __name__ == "__main__":
     # api-endpoint
     url = "https://jsonplaceholder.typicode.com/"
 
-
     # Sending a request to get users
     users = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                          .format(sys.argv[1])).json()

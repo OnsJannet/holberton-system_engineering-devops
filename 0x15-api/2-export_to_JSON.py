@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Exports to json
+Exports to CSV
 '''
 import json
 import requests
@@ -44,14 +44,11 @@ if __name__ == "__main__":
     '''
     exports to a json file
     '''
-    tasks_list = []
-    Jobect = {}
-    dictionary = {}
-    for task in todos:
-        dictionary["task"] = task.get('title')
-        dictionary["completed"] = task.get('completed')
-        dictionary["username"] = users.get("username")
-        tasks_list.append(dictionary)
-    Jobect[sys.argv[1]] = tasks_list
-    with open("{}.json".format(sys.argv[1]), 'w') as user_id:
-        json.dump(Jobect, user_id)
+
+    with open("{}.json".format(sys.argv[1]), "w") as user_id:
+        for task in todos:
+            json.dump({sys.argv[1]: [{
+                'task': task.get('title'),
+                'completed': task.get('completed'),
+                'username': users.get('username')
+            }for tasks in todos]}, user_id)

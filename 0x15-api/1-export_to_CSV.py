@@ -46,6 +46,7 @@ if __name__ == "__main__":
     exports to a csv file
     '''
 
-    with open("{}.csv".format(sys.argv[1]), "w") as user_id:
-        for line in finished_tasks:
-            user_id.write(line + "\n")
+    with open("{}.csv".format(sys.argv[1]), "w", newline="") as user_id:
+        writer = csv.writer(user_id, quoting=csv.QUOTE_ALL)
+        for task in todos:
+            writer.writerow([sys.argv[1], users.get("username"), task.get("completed"), task.get("title")])

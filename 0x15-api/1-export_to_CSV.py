@@ -2,9 +2,10 @@
 '''
 Exports to CSV
 '''
+import csv
 import requests
 import sys
-import csv
+
 
 
 if __name__ == "__main__":
@@ -50,3 +51,5 @@ if __name__ == "__main__":
         for task in todos:
             writer.writerow([sys.argv[1], users.get("username"),
                             task.get("completed"), task.get("title")])
+
+# https://docs.python.org/3/library/csv.html

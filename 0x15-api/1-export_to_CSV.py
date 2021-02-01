@@ -3,31 +3,23 @@
 Exports to CSV
 '''
 import requests
-from sys import argv
+import sys
 import csv
 
 
 if __name__ == "__main__":
 
-    '''
-    api-endpoint
-    '''
-
+    # api-endpoint
     url = "https://jsonplaceholder.typicode.com/"
 
-    '''
-     Sending a request to get users
-    '''
 
+    # Sending a request to get users
     users = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                         .format(argv[1].json()))
+                         .format(sys.argv[1])).json()
 
-    '''
-    Sending a request to get todos
-    '''
-
+    # Sending a request to get todos
     todos = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
-                         .format(argv[1].json()))
+                         .format(sys.argv[1])).json()
 
     '''
     checks if a task is completed by sending
@@ -42,7 +34,7 @@ if __name__ == "__main__":
     '''
 
     print("Employee {} is done with tasks({}/{}):".format(
-        user.get("name"), len(finished_tasks), len(todos)))
+        users.get("name"), len(finished_tasks), len(todos)))
 
     '''
     2nd line / n lines : display the title of completed tasks:

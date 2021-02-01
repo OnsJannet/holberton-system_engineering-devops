@@ -12,7 +12,6 @@ if __name__ == "__main__":
     # api-endpoint
     url = "https://jsonplaceholder.typicode.com/"
 
-
     # Sending a request to get users
     users = requests.get("https://jsonplaceholder.typicode.com/users/{}"
                          .format(sys.argv[1])).json()
@@ -49,4 +48,5 @@ if __name__ == "__main__":
     with open("{}.csv".format(sys.argv[1]), "w", newline="") as user_id:
         writer = csv.writer(user_id, quoting=csv.QUOTE_ALL)
         for task in todos:
-            writer.writerow([sys.argv[1], users.get("username"), task.get("completed"), task.get("title")])
+            writer.writerow([sys.argv[1], users.get("username"),
+                            task.get("completed"), task.get("title")])

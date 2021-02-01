@@ -46,9 +46,8 @@ if __name__ == "__main__":
     '''
 
     with open("{}.json".format(sys.argv[1]), "w") as user_id:
-        for task in todos:
             json.dump({sys.argv[1]: [{
                 'task': task.get('title'),
                 'completed': task.get('completed'),
                 'username': users.get('username')
-            }for tasks in todos]}, user_id)
+            } for task in todos]}, user_id)

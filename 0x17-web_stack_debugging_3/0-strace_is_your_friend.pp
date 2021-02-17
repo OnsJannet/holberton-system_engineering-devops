@@ -1,10 +1,5 @@
-  file { '/var/www/html/wp-settings.php':
-  ensure  => present,
-}->
-file_line { 'replace':
-  path    => '/var/www/html/wp-settings.php',
-  replace => true,
-  line    => "require_once( ABSPATH . WPINC . '/class-wp-locale.php' );",
-  match   => "require_once( ABSPATH . WPINC . '/class-wp-locale.phpp",
+# debugs apache 500 error
+exec { 'replace a word' :
+  command => 'sed -i "s/.phpp/.php/g" /var/www/html/wp-settings.php',
+  path    =>  '/usr/local/bin/:/bin/'
 }
-
